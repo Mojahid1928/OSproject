@@ -1,0 +1,19 @@
+# Ignore compiled files
+*.o
+*.a
+*.so
+*.exe
+
+# Ignore build directories
+/build/
+CMakeFiles/
+
+# Ignore IDE configuration files
+.vscode/
+
+# Ignore system-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore scripts logs
+*.log

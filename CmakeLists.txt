@@ -1,0 +1,26 @@
+cmake_minimum_required(VERSION 3.10)
+
+project(DeviceDriverEmulator)
+
+set(CMAKE_CXX_STANDARD 11)
+
+# Include directories
+include_directories(${CMAKE_SOURCE_DIR})
+
+# Add source files
+set(SOURCES
+    main.cpp
+    cli.cpp
+    core.cpp
+    utils.cpp
+)
+
+# Create the executable
+add_executable(emulator ${SOURCES})
+
+# Compiler flags
+if(MSVC)
+    target_compile_options(emulator PRIVATE /W4)  # MSVC warning level
+else()
+    target_compile_options(emulator PRIVATE -Wall -Wextra)
+endif()
